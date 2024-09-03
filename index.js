@@ -70,6 +70,13 @@ app.get("/about", function (req, res) {
   res.render("about", options);
 });
 
+// download image
+app.get("/download/:image", function (req, res) {
+  const image = req.params.image;
+  console.log(image);
+  res.download("static/" + image);
+});
+
 app.listen(port, () => {
   console.log(`Server listening on port: ${port}.`);
 });

@@ -9,9 +9,10 @@
   <body>
     <div id="app">
       <h1><%= title %></h1>
+      <p><%- content %></p>
+      <p><a href="download/<%= image %>">Download Image</a></p>
       <img src="<%= image %>" alt="..." width="250" />
-      <div><%- content %></div>
-      <small>Requested at: <%= requestTime %></small>
+      <p><small>Requested at: <%= requestTime %></small></p>
     </div>
   </body>
 </html>
