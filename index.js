@@ -2,6 +2,11 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+/** Part 3: Exploring Response Options */
+
+// serve static files from the static directory
+app.use(express.static("./static"));
+
 /** Part 2: Middleware */
 
 // A middleware function to display the timestamp of your request in the browser
@@ -45,6 +50,7 @@ app.get("/", function (req, res) {
       More complete front-end libraries like React, Angular, and Vue \
       also have Express integrations.",
     requestTime: req.requestDateTime,
+    image: "as6.jpg",
   };
   res.render("index", options);
 });
